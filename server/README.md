@@ -32,5 +32,12 @@ The planets data populated to the Front End is taken from the official [NASA Exo
 When the client is listening on a different port than the server, you get CORS error if you tried to fetch data from that server.
 
 ### Populate data to the server on startup
+Use `try {} catch {}` to wait for required data to be loaded
 
+### Scripting
+`script1 && script2` ==> script2 will wait script1 to finish
+`script1 & script2` ==> script2 and script1 will run in the background together
+`npm install --prefix server` ==> will install packages in the server directory
 
+### Serve the front end and back end on one port for production
+`set BUILD_PATH=../server/public && react-scripts build`
