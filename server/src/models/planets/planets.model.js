@@ -24,18 +24,18 @@ function loadPlanetsData() {
           delimiter: ",",
         })
       )
-      .on("data", (planet) => {
+      .on("data", async (planet) => {
         if (isHabitable(planet)) {
-          savePlanet(planet);
+          await savePlanet(planet);
         }
       })
       .on("error", (err) => {
         console.log(err);
         reject(err);
       })
-      .on("end", () => {
-        const countHabitablePlanets = (await getAllPlanets()).length
-        console.log(`${countHabitablePlanets} habitable planets found!`);
+      .on("end", async () => {
+        const countPlanetsFound = (await getAllPlanets()).length;
+        console.log(`${countPlanetsFound} habitable planets found!`);
         resolve();
       });
   });
