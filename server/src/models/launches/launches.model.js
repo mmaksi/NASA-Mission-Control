@@ -1,3 +1,5 @@
+const launchesModel = require("./launches.mongo")
+
 // creating a Map is an implementation detail that only the model knows about
 const launches = new Map();
 

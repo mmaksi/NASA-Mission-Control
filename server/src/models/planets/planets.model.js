@@ -1,6 +1,7 @@
 const fs = require("fs");
 const path = require("path");
 const {parse} = require("csv-parse");
+const planetsModel = require("./planets.mongo")
 
 const habitablePlanets = [];
 

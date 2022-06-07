@@ -48,3 +48,6 @@ Use `morgan` middleware to log all incoming requests
 
 ### Handling fetch() errors
 The `fetch()` function returns `{ ok: true }` on the `response` object if there was no error. And it should *explicitly* return `{ ok: false }` in the catch statement.
+
+# Databases - MongoDB and Mongoose
+![mongoose-and-mongodb]()
