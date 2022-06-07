@@ -5,6 +5,8 @@ The planets data populated to the Front End is taken from the official [NASA Exo
 # Notes and Lessons
 - Node File System module has no idea what CSV files are. It will treat it like a text file.
 - In Node all streams are implemented using the Event Emitter where the events are emitted by node as streams and we react on those events.
+- You seperate models from the controllers because one model can be used by different controllers or multiple models used by the same controller. For example, the planets model can be used by in the launches controller or stars model in planets controller.
+
 ### Why do you we use stream API made available by csv-parse to handle the Kepler Data?
 - Streams allow us to deal with large data sets as they are read by the hard drive line by line before waiting for the entire data to be loaded before doing anything with it.
 - We create a stream by using `fs.createReadStream()` then we pass the readable stream to `parse()` using `readableStream.pipe(writeableStream)` to parse the stream and create a JavaScript object.
@@ -15,6 +17,8 @@ The planets data populated to the Front End is taken from the official [NASA Exo
 
 - Most Express projects use the MVC (Model, View, Controller) design pattern to design the architecture of the API. The user uses the `Controller` to manipulate the `Model` which in turn updates the `View`.
 
+- `Models` transform the data in a way that is needed by the controller.
+
 - Seperating routers into specific folders allow you to add middlewares to these specific routers.
 
 ### Rest APIs
@@ -23,3 +27,10 @@ The planets data populated to the Front End is taken from the official [NASA Exo
 3. Use GET, POST, PUT and DELETE to deal with the endpoints
 4. Client/Server design
 5. Requests are stateless and cacheable (not related to any state on the client like a user session)
+
+### CORS middleware
+When the client is listening on a different port than the server, you get CORS error if you tried to fetch data from that server.
+
+### Populate data to the server on startup
+
+
