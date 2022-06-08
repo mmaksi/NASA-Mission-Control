@@ -52,3 +52,22 @@ The `fetch()` function returns `{ ok: true }` on the `response` object if there 
 # Databases - MongoDB and Mongoose
 ![mongoose-and-mongodb](https://i.ibb.co/3s3YVz3/mongodb.png)
 
+# Continuous Integration
+- Frequently committing code to a shared repository.
+- CI server detects changes made to the shared repository, builds, tests and reprots back to the development team.
+- Inspired by Agile.
+
+# Continuous Delivery
+- It gurantees that each code pushed to the main branch is ready to be delivered.
+- Gives you confidence that your software can be released to users at any point in time.
+- Acceptance tests made by QA teams in addition to UI tests.
+- It is best practice for both the backend and frontend.
+- Automatically release to the repository.
+
+# Continuous Deployment
+**Note**
+- Continuous Deployment is not for every product because some products like health-related products involve many manual procsesses that are very senisitve and very hard to automate.
+- Automatically deploy to production.
+
+# Pipelines
+- A pipeline is a set of steps that need to complete as part of CI process.
