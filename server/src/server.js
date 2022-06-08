@@ -1,4 +1,8 @@
 const http = require("http");
+
+// env will be populated to all imported files below
+require('dotenv').config();
+
 const app = require("./app");
 // const { loadLaunchData } = require("./models/launches/launches.model");
 const { loadPlanetsData } = require("./models/planets/planets.model");
