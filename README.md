@@ -4,15 +4,17 @@ The planets data populated to the Front End is taken from the official [NASA Exo
 
 ![nasa-mission-control-dashboard](https://i.ibb.co/6BJXc9h/nasa-mission-control.png)
 
-# 1. Node.js Fundamentals - Foundations
+# NASA Mission Control Dashboard Architecture
+![nasa-project-architecture](https://i.ibb.co/chmRMS6/architecture.png)
+
+# 1. Node.js Fundamentals - Foundations & Internals
 - You need a runtime to run JavaScript. Eg.: browsers, node.js and deno.
 - node.js is a JavaScript runtime built on Chrome's V8 JavaScript Engine.
 - Ryan Dahl created the _node.js bindings_ that are responsible for comunication between the V8 Engine for synchronous tasks and Libuv for asynchronous I/O tasks (it uses parts of the OS, mainly the Kernel).
 - Node.js provides `global` object instead of `window` object in the browser.
-
-# 2. Node.js Fundamentals - Internals
 - Opening a file in Windows differs from Linux and from MacOS. Libuv can handle this task using the `path` function from the Node.js API, making Node.js working on any OS!
 - Node.js API functions are handled by Libuv to handle asynchronous I/O tasks, making Node.js non-blocking.
+![node-internals](https://i.ibb.co/7RH9p0G/node-runtime.png)
 
 ### Is Node.js Multi Threaded?!
 - The CPU handles asynchronous tasks by using multiple threads. But for any process (program) to make use of the CPU threads, the programming language of that process must support multi-threaded programming.
@@ -76,17 +78,12 @@ Use `morgan` middleware to log all incoming requests
 ### Handling fetch() errors
 The `fetch()` function returns `{ ok: true }` on the `response` object if there was no error. And it should *explicitly* return `{ ok: false }` in the catch statement.
 
-
-
-
-
-
 # Databases - MongoDB and Mongoose
 - MongoDB has _documents_ orhanized into _collections_.
 - Documents in noSQL DBs include all related data together while they are seperated apart in tables in SQL DBs.
 - MongoDB provide horizontal scaling while SQL verticle scaling.
 - MongoDB's Schema (structure of data in the DB) is _flexible_ while in postgres it is rigid.
-![sql-vs-nosql](https://i.ibb.co/G3CPsfc/schema.png)
+![sql-vs-nosql](https://i.ibb.co/mN7Xqj7/schema.png)
 
 - MongoDB stores data in BSON format in _documents_ inside _collections_. Mongo itself doesn't enforce schemas.
 - We query Mongo collections using mongoose _models_.
