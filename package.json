@@ -2,6 +2,9 @@
   "name": "nasa-mission-control-project",
   "version": "1.0.0",
   "description": "",
+  "engines": {
+    "node": "14.17.6"
+  },
   "main": "index.js",
   "scripts": {
     "install-server": "cd server && npm install",
