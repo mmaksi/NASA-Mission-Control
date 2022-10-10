@@ -1,5 +1,6 @@
 import { useMemo } from "react";
 import { Appear, Table, Paragraph } from "arwes";
+import "./History.css"
 
 const History = props => {
   const tableBody = useMemo(() => {
@@ -20,19 +21,19 @@ const History = props => {
       });
   }, [props.launches]);
 
-  return <article id="history">
+  return <article className="history-body" id="history">
     <Appear animate show={props.entered}>
       <Paragraph>History of mission launches including SpaceX launches starting from the year 2006.</Paragraph>
       <Table animate>
         <table style={{tableLayout: "fixed"}}>
           <thead>
             <tr>
-              <th style={{width: "2rem"}}></th>
-              <th style={{width: "3rem"}}>No.</th>
-              <th style={{width: "9rem"}}>Date</th>
-              <th>Mission</th>
-              <th style={{width: "7rem"}}>Rocket</th>
-              <th>Customers</th>
+              <th className="history-card"></th>
+              <th className="history-no">No.</th>
+              <th className="history-date">Date</th>
+              <th className="history-mission">Mission</th>
+              <th className="history-rocket">Rocket</th>
+              <th className="history-customers">Customers</th>
             </tr>
           </thead>
           <tbody>
