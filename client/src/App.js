@@ -1,5 +1,4 @@
 import { BrowserRouter as Router } from "react-router-dom";
-import { CompatRouter } from "react-router-dom-v5-compat";
 import {
   Arwes,
   SoundsProvider,
@@ -23,9 +22,7 @@ const App = () => {
         >
           {(anim) => (
             <Router>
-              <CompatRouter>
                 <AppLayout show={anim.entered} />
-              </CompatRouter>
             </Router>
           )}
         </Arwes>
